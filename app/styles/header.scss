@@ -5,6 +5,20 @@ header{
   
   background: #000;
   
+  .main-top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .top-buttons {
+    padding: 6px 30px;
+    color: white;
+    font-size: 14px;
+    background: #333;
+    margin-left: 1px;
+}
+  
   .btn-primary{
       background: #dd3857;
       border: none;
@@ -50,6 +64,13 @@ header{
   }
   
   .form-inline{
+    
+    input{
+        border: 1px solid #393939;
+        background-color: #323232;
+        border-radius: 16px;
+    }
+    
     @media only screen and (max-width: 991px) {
       justify-content: center;
       input{
