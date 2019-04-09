@@ -110,3 +110,75 @@ header{
 }
 
 
+.phone-alert{
+  
+display: flex;
+align-items: center;
+justify-content: flex-start;
+width: 100%;
+min-height: 350px;
+padding: 40px;
+
+
+
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+
+
+
+@media only screen and (max-width: 991px) { //1280
+
+padding: 40px 20px;
+align-items: flex-start;
+}
+
+  .help-title{
+    color: #7834f7;
+    font-size: 40px;
+    font-family: 'Conv_neo_sans_bold';
+    line-height: 100%;
+    
+    @media only screen and (max-width: 991px) { 
+    
+      font-size: 34px;
+    
+    }
+    
+  }
+
+  strong{
+        font-family: 'Conv_neo_sans_bold';
+    font-size: 28px;
+    color: #444;
+    margin-left: 5px;
+    
+    @media only screen and (max-width: 991px) {
+    
+      font-size: 24px;
+      display: block;
+    
+    }
+   
+  }
+  
+  .phone {
+      margin-bottom: 0;
+  }
+  
+  img{
+    max-width: 110px;
+   width: 70%;
+   margin: 0 auto;
+display: block;
+
+@media only screen and (max-width: 991px) { //1280
+
+  max-width: 100px;
+
+}
+
+  }
+  
+ 
+    
+}
+
