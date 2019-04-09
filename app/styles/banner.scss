@@ -1,13 +1,30 @@
 .banner-home {
   overflow: hidden;
   height: 440px;
-  border: 1px solid red;
   color: white;
 
   .container {
     display: flex;
     height: 100%;
     align-items: center;
+  }
+
+
+  .btn-app {
+    display: inline-block;
+    width: 150px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF2C83), to(#EA0265));
+    background-image: -webkit-linear-gradient(top, #FF2C83 0%, #EA0265 100%);
+    background-image: -o-linear-gradient(top, #FF2C83 0%, #EA0265 100%);
+    background-image: linear-gradient(-180deg, #FF2C83 0%, #EA0265 100%);
+    border-radius: 100px;
+    font-family: 'Conv_neo_sans_bold', sans-serif;
+    color: #FFFFFF;
+    width: 180px;
+    text-align: center;
+    padding: 10px 5px;
+    font-weight: bold;
+    text-decoration: none;
   }
 
  
@@ -23,10 +40,32 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17365a', endColorstr='#000000', GradientType=1 );
   }
 
-.text {
 
-  p {
+  .item2 {
+    background: rgba(102,31,194,1);
+    background: -moz-linear-gradient(left, rgba(102,31,194,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,31,194,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(102,31,194,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(102,31,194,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(102,31,194,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(102,31,194,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#661fc2', endColorstr='#000000', GradientType=1 );
+  }
+
+.text {
+  position: relative;
+  z-index: 10;
+
+  .text-1 {
      font-size: 14px;
+  }
+
+  .text-2 {
+    font-weight: bold;
+
+    span {
+      font-weight: 200;
+    }
   }
 }
 
@@ -48,12 +87,30 @@
         width: 80%;
       }
 
+      .text-2 {
+        font-size: 40px;
+
+        span {
+          font-size: 20px;
+        }
+      }
+
       .item {
         height: 440px;
       }
 
       h2 {
         font-size: 60px;
+      }
+
+      .item2 {
+        img {
+          margin-right: 10%;
+        }
+
+        .text {
+          margin-left: 10%;
+        }
       }
     }
 
@@ -65,6 +122,11 @@
     .item {
       height: 290px;
       text-align: center;
+
+      img {
+        position: relative;
+        bottom: 20px;
+      }
     }
     
   }
@@ -91,4 +153,41 @@
       }
     }
   }
+}
+
+
+.slick-dots {
+  margin-bottom: 10px;
+}
+
+
+
+.slick-dots li button:before {
+  color: white;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FF2C83;
+}
+
+
+
+// 
+.slick-arrow {
+  color: red;
+  z-index: 10;
+  
+  &:before {
+    font-size: 30px;
+  }
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
 }
