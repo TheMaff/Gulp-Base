@@ -20,7 +20,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-workbox.precaching.precacheAndRoute(['index.html', '/images/kf4-logo-vtr-2.png', '/styles/main.css', '/styles/vendor.css', '/scripts/modernizr.js', '/scripts/vendor.js']);
+workbox.precaching.precacheAndRoute(['index-off.html','/images/kf4-logo-vtr-2.png', '/images/mapa-off.png', '/images/phone-512.png', '/images/logo-vtr-footer-min.png', '/styles/main.css', '/styles/vendor.css', '/scripts/modernizr.js', '/scripts/vendor.js', '/fonts/NeoSansStd Regular.ttf', '/fonts/neo_sans_bold.ttf']);
 
 workbox.routing.registerRoute(/images\/products\/(.*)$/,
   workbox.strategies.cacheFirst({
@@ -57,3 +57,20 @@ workbox.routing.registerRoute(
     ]
   })
 );
+
+// workbox.routing.registerRoute(
+//   new RegExp ('https?.*'),
+//   workbox.strategies.networkFirst()
+// );
+
+const htmlHandler = workbox.strategies.networkOnly();
+
+// A NavigationRoute matches navigation requests in the browser, i.e. requests for HTML.
+
+const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
+
+ return htmlHandler.handle({ event }).catch(() => caches.match('index-off.html'));
+
+});
+
+workbox.routing.registerRoute(navigationRoute);
