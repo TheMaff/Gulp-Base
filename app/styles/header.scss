@@ -50,6 +50,13 @@ header{
   }
   
   .form-inline{
+    
+    input{
+        border: 1px solid #393939;
+        background-color: #323232;
+        border-radius: 16px;
+    }
+    
     @media only screen and (max-width: 991px) {
       justify-content: center;
       input{
