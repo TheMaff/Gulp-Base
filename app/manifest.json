@@ -1,18 +1,16 @@
 {
-  "name": "Gulp tempalte base",
-  "short_name": "Gulp Base",
-  "icons": [{
-        "src": "images/icon-128x128.png",
-        "sizes": "128x128",
-        "type": "image/png"
-      }, {
-        "src": "images/apple-touch-icon.png",
-        "sizes": "152x152",
-        "type": "image/png"
-      }],
-  "start_url": "/index.html?utm_source=homescreen",
+  "name": "Vtr Home Page",
+  "short_name": "VTR",
+  "lang": "es-ES",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+  "theme_color": "#FF4063",
+  "icons": [
+    {
+      "src": "kf4-logo-vtr-2.png",
+      "sizes": "53 × 65",
+      "type": "image/png"
+    }
+  ]
 }
-
