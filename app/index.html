@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-<<<<<<< HEAD
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2F3BA2">
-=======
-    
     <link rel="manifest" href="manifest.json">
->>>>>>> 037ad494dd4bb4636d01db38812b5ad841651b44
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gulp</title>
@@ -30,6 +26,7 @@
     
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/banner.css">
     <!-- endbuild -->
     
     <!-- build:js scripts/modernizr.js -->
@@ -85,28 +82,20 @@
 
 
     <!--  -->
-    <section class="bg-primary">
-      <div class="container bg-primary">
-        <div class="regular slider">
-          <div>
-            <img src="http://placehold.it/1110x300?text=1">
-          </div>
-          <div>
-            <img src="http://placehold.it/1110x300?text=2">
-          </div>
-          <div>
-            <img src="http://placehold.it/1110x300?text=3">
-          </div>
-          <div>
-            <img src="http://placehold.it/1110x300?text=4">
-          </div>
-          <div>
-            <img src="http://placehold.it/1110x300?text=5">
-          </div>
-          <div>
-            <img src="http://placehold.it/1110x300?text=6">
+    <section class="banner-home">
+      <div class="regular slider">
+        <div class="item item1">
+          <div class="container">
+            <div class="text">
+              <p class="text-1">Contrata un Pack Vive Más y disfruta de</p>
+              <h2>mega 200 <br> <span>+70 canales HD</span></h2>
+              <p class="text-2">$39.990 mensuales</p>
+            </div>
+            <img src="images/banner-01.png" alt="Mega 200 + 70 canales">
           </div>
         </div>
+        
+        
       </div>
     </section>
 
@@ -185,8 +174,8 @@
             dots: false,
             arrows: false,
             infinite: false,
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }]
       });

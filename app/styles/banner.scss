@@ -1,0 +1,94 @@
+.banner-home {
+  overflow: hidden;
+  height: 440px;
+  border: 1px solid red;
+  color: white;
+
+  .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+ 
+
+  .item1 {
+    background: rgba(23,54,90,1);
+    background: -moz-linear-gradient(left, rgba(23,54,90,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(23,54,90,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(23,54,90,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(23,54,90,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(23,54,90,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(23,54,90,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17365a', endColorstr='#000000', GradientType=1 );
+  }
+
+.text {
+
+  p {
+     font-size: 14px;
+  }
+}
+
+ h2 {
+  text-transform: uppercase;
+  line-height: 100%;
+
+  span { 
+    font-weight: 200;
+  }
+  
+}
+
+  @media (min-width: 992px) {
+    & {
+      height: 440px;
+
+      .text {
+        width: 80%;
+      }
+
+      .item {
+        height: 440px;
+      }
+
+      h2 {
+        font-size: 60px;
+      }
+    }
+
+    .banner-mob { display: none; }
+  }
+
+  @media (max-width: 991px) {
+    &,
+    .item {
+      height: 290px;
+      text-align: center;
+    }
+    
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    & {
+      
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      .container {
+        display: block;
+
+        img {
+          max-width: 220px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
