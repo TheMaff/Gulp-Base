@@ -20,11 +20,11 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-workbox.precaching.precacheAndRoute([]);
+workbox.precaching.precacheAndRoute(['index.html', '/images/kf4-logo-vtr-2.png', '/styles/main.css', '/styles/vendor.css', '/scripts/modernizr.js', '/scripts/vendor.js']);
 
 workbox.routing.registerRoute(/images\/products\/(.*)$/,
   workbox.strategies.cacheFirst({
-    cacheName: 'furniture-store-images',
+    cacheName: 'vtr-store-images',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 10,
@@ -37,7 +37,7 @@ workbox.routing.registerRoute(/images\/products\/(.*)$/,
 workbox.routing.registerRoute(
   new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'furniture-store-fonts',
+    cacheName: 'vtr-store-fonts',
     plugins: [
       new workbox.expiration.Plugin({
         maxAgeSeconds: 7 * 24 * 60 * 60 // one week
@@ -49,7 +49,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   new RegExp ('https://code.getmdl.io/(.*)'),
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'furniture-store-mdl',
+    cacheName: 'vtr-store-mdl',
     plugins: [
       new workbox.expiration.Plugin({
         maxAgeSeconds: 7 * 24 * 60 * 60 // one week
