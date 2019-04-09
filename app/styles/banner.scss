@@ -189,3 +189,19 @@
 .slick-prev {
   left: 0;
 }
+
+
+
+
+// calugas 
+
+.vtr-main-grid {
+
+  @media (max-width: 991px) {
+    & {
+      .row {
+        display: block;
+      }
+    }
+  }
+}
