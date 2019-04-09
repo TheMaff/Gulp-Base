@@ -6,9 +6,16 @@ header{
   background: #000;
   
   .main-top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: #333;
+      > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        max-width: 930px;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
   }
   
   .top-buttons {
@@ -17,6 +24,11 @@ header{
     font-size: 14px;
     background: #333;
     margin-left: 1px;
+    
+    @media only screen and (max-width: 991px) { 
+      padding: 6px 6px;
+    }
+    
 }
   
   .btn-primary{
