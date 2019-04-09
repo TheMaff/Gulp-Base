@@ -57,4 +57,3 @@ workbox.routing.registerRoute(
     ]
   })
 );
-
